@@ -86,5 +86,15 @@ public class UserController {
         return "";
     }
 
+    @RequestMapping("/class163")
+    @ResponseBody
+    public String class163(ModelAndView modelAndView) throws ClassNotFoundException {
+        Class clazz = Class.forName("com.first.timetask.TimeTask");
+        Method[] methods = clazz.getMethods();
+        for(Method method : methods){
+            System.out.println(method);
+        }
+        return "";
+    }
 
 }
