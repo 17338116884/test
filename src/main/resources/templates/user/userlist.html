@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<title>默认页面</title>
+<body>
+<table>
+    <tr th:each="user,iterStat : ${list}">
+        <td th:text="${user.id}"> </td>
+    <td th:text="${user.name}"></td>
+    </tr>
+</table>
+</body>
+<script>
+function update(id) {
+    alert(id);
+}
+</script>
+</html>
